@@ -1,0 +1,230 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish: hsl(246, 25%, 77%);
+}
+
+body {
+    margin: 0;
+    background-image: url(./assets/images/bg-intro-mobile.png);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: var(--red);
+    color: #fff;
+    display: grid;
+    text-align: center;
+    padding: 0 30px;
+    padding-top: 92px;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.7rem;
+    line-height: 1.4;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+}
+
+.section__header {
+    margin: 0;
+    background-color: var(--blue);
+    padding: 2px 0;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 0  rgba(0, 0, 0, .1);
+}
+
+.section__cta {
+    padding: 0 50px;
+    font-weight: 700;
+}
+
+.section__cta--thin {
+    font-weight: 400;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 80px;
+    box-shadow: 0 10px 0  rgba(0, 0, 0, .1);
+}
+
+.form__field--error {
+    position: relative;
+    margin-bottom: 20px;
+    border-color: var(--red);
+}
+
+.form__field--error .form__input {
+    outline: none;
+    border: none;
+    border: 2px solid var(--red);
+}
+
+.form__field--error::after {
+    content: attr(data-error);
+    position: absolute;
+    right: 0;
+    top: 65px;
+    color: var(--red);
+    font-size: .7rem;
+    font-style: italic;
+}
+
+.form__field--error::before {
+    content: url(./assets/images/icon-error.svg);
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1;
+}
+
+::placeholder {
+    font-weight: 700;
+}
+
+.form__input {
+    height: 50px;
+    width: 250px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid var(--grayish);
+    padding-left: 20px;
+    opacity: .9;
+}
+
+.form__submit {
+    width: 275px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: #fff;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 0 hsl(154, 58%, 42%);
+}
+
+.form__terms {
+    color: var(--grayish);
+    font-size: .65rem;
+    padding: 0 40px;
+    line-height: 1.5rem;
+    margin-top: 15px;
+}
+
+.form__terms a {
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.attribution {
+    font-size: 11px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.attribution a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+
+
+/* DESKTOP */
+@media screen and (min-width: 800px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 120px 165px;
+    }
+
+    .title {
+        text-align: left;
+        font-size: 3.2rem;
+        line-height: 1.1;
+    }
+
+    .text {
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        margin-top: 30px;
+    }
+
+    .section__header {
+        width:87%;
+        margin-top: 0;
+        margin-left: 78px;
+        font-size: .9rem;
+    }
+
+    .form {
+        margin-bottom: 0;
+        width: 87%;
+        margin-left: 78px;
+    }
+    
+    .form__field--error::after {
+        top: 76px;
+    }
+    
+    .form__field--error::before {
+        top: 35px;
+    }
+
+
+    .form__input {
+        width: 380px;
+        margin: 20px 0 0 0;
+    }
+
+    .form__submit {
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    .form__submit:hover {
+        opacity: .6;
+    }
+
+    .form__terms {
+        margin-bottom: 25px;
+    }
+
+
+    .attribution {
+        position: absolute;
+        font-size: 12px;
+        right: 0;
+        left: 0;
+        bottom: -10px;
+    }
+    
+    .attribution a:hover {
+        font-size: 14px;
+        color: var(--green);
+    }
+}
